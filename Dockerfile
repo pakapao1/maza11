@@ -1,7 +1,7 @@
-FROM php:8.2-apache
+FROM php:8.3-apache
 
-# Salin semua fail ke web root Apache
+RUN docker-php-ext-install pdo pdo_mysql
+
 COPY . /var/www/html/
 
-# Port lalai Apache
 EXPOSE 80
