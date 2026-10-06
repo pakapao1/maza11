@@ -1,7 +1,8 @@
 <?php
-// Database configuration.
-// On Render, values are read from Environment Variables.
-// On local XAMPP, the existing local defaults are used.
+
+// Database configuration
+// On Render, values come from Environment Variables.
+// On local XAMPP, these fall back to the existing local settings.
 
 define('DB_HOST', getenv('DB_HOST') ?: '127.0.0.1');
 define('DB_PORT', (int) (getenv('DB_PORT') ?: 3307));
